@@ -1,0 +1,22 @@
+<svg width="64" height="16" >
+  <path stroke="#ffb4ee" stroke-width="2" fill="none"
+        d="M 5,12
+           C 5,12 7.5,19 9,12
+           "/>
+  <path stroke="#ffb4ee" stroke-width="2" fill="none"
+        d="M 9,12
+           C 9,12 11,5 13.5,12
+           "/>
+   <path stroke="#ffb4ee" stroke-width="2" fill="none"
+        d="M 13.5,12
+           C 13.5,12 16,19 18.5,12
+           "/>
+   <path stroke="#ffb4ee" stroke-width="2" fill="none"
+        d="M 18.5,12
+           C 18.5,12 21,5 23.5,12
+           "/>
+   <path stroke="#ffb4ee" stroke-width="2" fill="none"
+        d="M 23.5,12
+           C 23.5,12 26,19 28.5,12
+           "/>
+</svg>
