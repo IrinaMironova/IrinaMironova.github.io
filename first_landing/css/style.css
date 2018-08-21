@@ -1,12 +1,8 @@
-body {
+
+.landing {
 	font-family: 'Titillium Web', sans-serif;
 	color: white;
-	width: 100%;
 	overflow-x: hidden;
-}
-.landing {
-	width: 1440px;
-	margin: 0 auto;
 }
 .first_page,
 	.second_page,
@@ -224,24 +220,38 @@ footer a button:hover {
   	letter-spacing: 0.4px;
  	 text-align: center;
 }
-.team .img {
-	display: inline-block;
-	margin: 78px 200px 41px;
-	width: 100%;
+
+.team figure {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 15px;
 }
-.team figure img {
-	margin-right: 80px;
-}
-}
-.team figure img:nth-child(4) {
-	margin-right: 0;
-}
-.team .img img{
+.team  img{
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
 }
-.name h3 {
+.members {
+	width: 80%;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.member {
+	width: 23%;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.member4 {
+	margin-right: 0;
+}
+
+.members h3 {
 	margin: 0;
 	text-transform: uppercase;
 	font-size: 24px;
@@ -251,26 +261,8 @@ footer a button:hover {
  	text-align: center;
  	color: #27283d;
 }
-.name {
-	display: inline-block;
-}
-.name1 {
-	width: 196px;
- 	margin: 0 85px 31px 200px;
-}
-.name2 {
-	width: 190px;
- 	margin: 0 82px 31px 0;
-}
-.name3 {
-	width: 202px;
- 	margin: 0 97px 31px 0;
-}
-.name4 {
-	width: 179px;
- 	margin: 0 207px 31px 0;
-}
-.name h4 {
+
+.members h4 {
 	font-size: 16px;
   	font-weight: normal;
   	font-style: normal;
@@ -280,7 +272,7 @@ footer a button:hover {
   	text-align: center;
   	color: #30bae7;
 }
-.name p {
+.members p {
 	font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -289,10 +281,14 @@ footer a button:hover {
   color: #3c4761;
 }
 .socials {
-	width: 70%;
+	width: 180px;
+	margin: 0 auto;
 	height: 50px;
-	margin: 0 240px 0 219px;
 	position: relative;
+}
+.member2 .socials,
+.member4 .socials {
+	width: 135px;
 }
 .icons a { 
   	display: inline-block;
@@ -320,17 +316,17 @@ footer a button:hover {
 .icons2 {
 	position: absolute;
 	top: 0;
-	left: 302px;
+	left: 0;
 }
 .icons3 {
 	position: absolute;
 	top: 0;
-	left: 560px;
+	left: 0;
 }
 .icons4 {
 	position: absolute;
 	top: 0;
-	left: 861px;
+	left: 0;
 }
 .fourth_page {
 	background-color: #ffffff;
@@ -354,9 +350,13 @@ footer a button:hover {
  	text-align: center;
 }
 .skills {
-	width: 71%;
+	width: 60%;
 	margin: 84px auto 32px;
 	overflow: hidden;
+}
+.name_skills {
+	width: 58%;
+	margin: 32px auto;
 }
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
 *,
@@ -477,11 +477,7 @@ footer a button:hover {
   -webkit-transform: rotate(300deg);
           transform: rotate(300deg);
 }
-.name_skills {
-	width: 100%;
-	margin: 32px 220px 122px 220px;
-	
-}
+
 .name_skills h3 {
 	display: inline-block;
 	text-transform: uppercase;
@@ -560,7 +556,8 @@ footer a button:hover {
 	border-radius: 5px;
 }
 .media {
-	margin: 62px 168px 127px 172px;
+	width: 65%;
+	margin: 62px auto;
 }
 .media h4 {
 	display: inline-block;
@@ -821,25 +818,64 @@ margin-bottom: 40px;
 .seven_page footer a:focus {
   	color: #30bae7;
 }
+@media (max-width: 1500px) {
+.fourth_page {
+	height: 1200px;
+}
+.skills {
+    width: 200px;
+    margin: 40px 0 32px 30%;
+    float: left;
+}
+.pie-wrapper {
+	margin: 0 20px 20px;
+    
+}
+
+.name_skills {
+	width: 280px;
+    margin: 80px 20px 0 650px;
+}	
+
+.name_skills h3:first-child {
+	margin-left: 20px;
+	margin-bottom: 150px;
+	    margin-right: 0;
+}
+.name_skills h3:nth-child(2) {
+   margin-left: 20px;
+    margin-bottom: 130px;
+    margin-right: 0;
+}
+.name_skills h3:nth-child(3) {
+    margin-left: 0;
+    margin-bottom: 110px;
+    margin-right: 0;
+}
+.name_skills h3:nth-child(4) {
+    margin: 40px;
+
+}
+.fifth_page {
+	height: 2200px;
+}
+.media {
+	width: 450px;
+    margin: 62px auto 80px;
+}
+.name_media1 h4:first-child,
+.name_media2 h4:first-child {
+	width: 450px;
+    margin: 10px auto;
+}
+.name_media1 h4:nth-child(2),
+.name_media2 h4:nth-child(2) {
+	width: 450px;
+    margin: 10px auto;
+} 
+}
 
 @media (max-width: 1200px) {
-body {
-	width: 100%;
-}
-.landing {
-	 width: 930px;
-	 
-	}
-	.first_page,
-	.second_page,
-	.third_page,
-	.fourth_page,
-	.fifth_page,
-	.six_page,
-	.seven_page {
-		
-		width: 950px;
-	}
 	.first_page section {
 		width: 600px;
 		margin: 100px auto;	
@@ -847,7 +883,6 @@ body {
 	.first_page header nav {
     margin-left: 150px;
 }
-	
 	.first_page section h1,
 	.second_page  h1,
 	.third_page  h1,
@@ -928,108 +963,17 @@ body {
 	.welcome li a {
 		font-size: 25px;
 	}
-	
-	.team {
-		width: 100%;
+	.third_page {
+		height: 1200px;
 	}
-	.team .img {
-		width: 950px;
-		margin: 0 auto;
-	}
-		.team .img img:first-child {
-   margin-left: 80px;
-   margin-right: 0;
+.member {
+	width: 35%;
 }
-	.team .img img {
-		margin-top: 20px;
-    width: 90px;
-    height: 90px;
-   margin-left: 135px;
-   margin-right: 0;
-}
-.name {
-	margin-top: 30px;
-}
-  .name1 {
-  	margin-left: 30px;
-  	width: 200px;
-  	
-  }  
-   .name2 {
-  	width: 200px;
-  }  
-   .name4 {
-  	margin-right: 0;
-  }  
-  
-
-.name1,
-.name2,
-.name3 {
-	
-	margin-right: 25px;
-}
-
-.socials {
-	width: 820px;
-
-    margin: 0 240px 0 50px;
-    
-	
-}
-.icons {
-width: 180px;
-margin: 0;
-padding: 0;
-}
-.icons2 {
-left: 250px;
-}
-.icons3 {
-left: 450px;
-}
-.icons4 {
-
-left: 680px;
-}
-
-.fourth_page {
-	height: 1000px;
-}
-.skills {
-    width: 200px;
-    margin: 40px 0 32px 250px;
-    float: left;
-}
-.pie-wrapper {
-	margin: 0 20px 20px;
-    
-}
-
 .name_skills {
 	width: 280px;
-    margin: 80px 20px 0 450px;
-}	
+    margin: 80px 20px 0 480px;
+}
 
-.name_skills h3:first-child {
-	margin-left: 20px;
-	margin-bottom: 150px;
-	    margin-right: 0;
-}
-.name_skills h3:nth-child(2) {
-   margin-left: 20px;
-    margin-bottom: 130px;
-    margin-right: 0;
-}
-.name_skills h3:nth-child(3) {
-    margin-left: 0;
-    margin-bottom: 110px;
-    margin-right: 0;
-}
-.name_skills h3:nth-child(4) {
-    margin: 40px;
-
-}
 .fifth_page {
 	height: 1000px;
 }
@@ -1096,23 +1040,7 @@ left: 680px;
 }
 }
 @media (max-width: 992px) {
-	body {
-	width: 100%;
-}
-.landing {
-	 width: 750px;
-	 margin: 0 auto;
-	}
-	.first_page,
-	.second_page,
-	.third_page,
-	.fourth_page,
-	.fifth_page,
-	.six_page,
-	.seven_page {
-		
-		width: 750px;
-	}
+	
 	.first_page section {
 		width: 500px;	
 	}
@@ -1221,68 +1149,15 @@ left: 680px;
     line-height: 1;
 }
 .third_page {
-	height: 1300px;
+	height: 2200px;
 }
-	.team {
-		width: 80%;
-		float: left;
-	}
-	.team .img {
-		width: 20%;
-		float: left;
-	}
-	.team .img img {
-    width: 80px;
-    height: 80px;
-    margin: 110px 20px 50px 140px;
-}
-.name {
-	margin-top: 0;
-}
-.name h3 {
-margin-top: 20px; 
-    font-size: 18px;
-}
-.team .img img:first-child {
-    margin-left: 140px;
-    margin-right: 0;
-    margin-top: 40px;
-}
-  .name1,
-  .name2,
-  .name3,
-  .name4 {
-  	margin-left: 140px;
-  	width: 40%;
-  }  
-.socials {
-	width: 190px;
-}
-
-.icons {
-width: 180px;
-display: block;
-}
-.icons1{
-	left:240px;
-	top: 200px;
-}
-.icons2 {
-top:430px;
-left: 260px;
-}
-.icons3 {
-left: 240px;
-top: 690px;
-}
-.icons4 {
-left: 260px;
-top: 940px;
+.member {
+	width: 50%;
 }
 
 .skills {
-    width: 40%;
-    margin: 40px 0 32px 50px;
+    width: 35%;
+    margin: 40px 0 32px 150px;
     float: left;
 }
 .pie-wrapper {
@@ -1291,8 +1166,8 @@ top: 940px;
 }
 
 .name_skills {
-	width: 280px;
-    margin: 90px 0 0 260px;
+	width: 300px;
+    margin: 90px 0 0 380px;
 
 }	
 
@@ -1359,23 +1234,7 @@ textarea {
 }
 }
 @media (max-width: 768px) {
-	body {
-	width: 100%;
-}
-.landing {
-	 width: 550px;
-	 margin: 0 auto;
-	}
-	.first_page,
-	.second_page,
-	.third_page,
-	.fourth_page,
-	.fifth_page,
-	.six_page,
-	.seven_page {
-		
-		width: 550px;
-	}
+
 	.first_page section {
 		width: 550px;	
 	}
@@ -1402,49 +1261,8 @@ textarea {
     margin-left: 0;
 }
 .third_page {
-	height: 1400px;
+	height: 2400px;
 }
-.third_page h1,
-.six_page h1 {
-    line-height: 1;
-}
-.name h3 {
-    font-size: 18px;
-    line-height: 1; 
-}
-.team .img img:first-child {
-    margin-left: 140px;
-    margin-right: 0;
-    margin-top: 90px;
-}
-
-
-
-
-.icons1{
-	left: 185px;
-	top: 250px;
-}
-
-.icons2 {
-top:530px;
-left: 195px;
-
-}
-
-.icons3 {
-left: 185px;
-top: 850px;
-
-}
-.icons4 {
-left: 195px;
-top: 1135px;
-}
-
-
-
-
 .PORTFOLIO li a { 
     margin-left: 15px;
 }
@@ -1470,6 +1288,10 @@ textarea {
     .second {
     left: 240px;
 }
+.fifth_page nav {
+    width: 400px;
+    
+}
 .six_page {
 	height: 1600px;
 }
@@ -1485,4 +1307,43 @@ textarea {
     width: 500px;
     margin-left: 20px;
 }
+.skills {
+	width: 35%;
+    margin: 40px 0 32px 10px;
+}
+.name_skills{
+	width: 200px;
+	margin: 75px 0 32px 260px;
+}
+}
+@media (max-width: 640px) {
+.skills {
+	width: 45%;
+    margin: 40px 0 32px 10px;
+}
+.name_skills{
+	width: 200px;
+	margin: 75px 0 32px 275px;
+}
+}
+@media (max-width: 480px) {
+	.first_page section {
+		width: 400px;
+	}
+.first_page section h1 {
+	width: 300px;
+	margin: 0 auto;
+}
+.skills {
+	width: 45%;
+    margin: 40px 0 32px 0;
+}
+.name_skills{
+	width: 200px;
+	margin: 125px 0 125px 235px;
+}
+.name_skills h3 {
+	font-size: 16px;
+}
+
 }
