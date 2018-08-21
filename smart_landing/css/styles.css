@@ -56,8 +56,8 @@
       padding: 14px 21px 12px 20px;
       line-height: 0.6; }
   .container .first_page .menu-container {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -10px;
     left: 90%;
     height: 40px; }
     .container .first_page .menu-container button {
@@ -536,7 +536,7 @@
       padding: 32px 52px; }
       .container .first_page .menu-container {
         left: 80%;
-        top: -40px; }
+        top: -55px; }
       .container .first_page h1 {
         margin-top: 230px; }
     .container .third_page {
