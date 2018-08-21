@@ -673,8 +673,10 @@ $third_color: #4f4f6f;
 							.select {
 								flex-direction: column;
 							}
-							.area input[type="textarea"] {
+							.area {
+								textarea {
 								width: 370px;}
+							}
 							}
 						}
 
@@ -809,8 +811,10 @@ $third_color: #4f4f6f;
 							.select {
 								flex-direction: column;
 							}
-							.area input[type="textarea"] {
+							.area {
+								textarea {
 								width: 200px;}
+							}
 							}
 						}
 

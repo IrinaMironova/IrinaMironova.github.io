@@ -406,7 +406,7 @@
               left: 75%; }
             .container .common .second .content .form .select {
               flex-direction: column; }
-            .container .common .second .content .form .area textarea {
+            .container .common .second .content .form .area input[type="textarea"] {
               width: 370px; }
     .container footer {
       width: 100%;
@@ -480,7 +480,7 @@
                 top: 97px; }
             .container .common .second .content .form .select {
               flex-direction: column; }
-            .container .common .second .content .form .area textarea {
+            .container .common .second .content .form .area input[type="textarea"] {
               width: 200px; }
     .container footer {
       width: 100%;
