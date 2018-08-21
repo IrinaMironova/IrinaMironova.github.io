@@ -10,7 +10,7 @@ function showMenu() {
 };
 $('.owl-carousel1').owlCarousel({
     loop:true,
-    margin: 0,
+    margin: 10,
     nav:true,
     responsive:{
         0:{
@@ -19,7 +19,7 @@ $('.owl-carousel1').owlCarousel({
         850:{
             items:2
         },
-        1300: {
+        1520: {
            items:3
         }
     }
