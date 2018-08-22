@@ -62,8 +62,8 @@
 		header{
 			font-family: 'OpenSans-SemiBold', sans-serif;
 			font-size: $font-size1 + 22px;
-			display: inline-flex;
-			justify-content: space-between;
+			display: flex;
+			justify-content: flex-end;
 			.logo{
 				border: solid 3.5px #170f1c;
 				opacity: 0.6;
@@ -76,7 +76,7 @@
 		position: fixed;
 		z-index: 10;
 		top: -10px;
-		left: 90%;
+		left: 0;
 		height: 40px;
 
 		button {
@@ -86,20 +86,14 @@
 }
 			.toggle-menu {
   			position: absolute;
-  			top: 92px;
-  			left: 0;
- 			margin-left: 60px;
-			display: block;
-  			height: 35px;
-  			width: 35px;
-  			margin-bottom: 2px;
+  			
   
 }
 			label[for="toggle-menu"] {
  			 position: absolute;
- 			 margin-left: 60px;
+ 			 margin-left: 10px;
  			 opacity: 0.6;
- 			 top: 92px;
+ 			 top: 102px;
   			 z-index: 2;
  			 height: 35px;
   			width: 35px;
@@ -109,9 +103,15 @@
 
 }
 .menu.active {
-		display: block;
-		width: 100px;
+		position: absolute;
+		top: -82px;
+		display: flex;
+		justify-content: space-around;
+		width: 98.5vw;
 		border: none;
+		padding: 70px 50px 50px;
+    	box-sizing: border-box;
+
 	}
 	.menu {
   	display: none;
@@ -123,14 +123,18 @@
   	border-radius: 5px;
   	width: 100px;
   	margin-top: 92px;
-  	box-shadow: 12px 14px 15px gray;
+  	box-shadow: 12px 14px 15px lightgray;
 
-  li{
+
+  	li{
+  		display: inline-block;
+  		margin-right: 20px;
 		padding: 5px;
 		transition: all 0.3s;
 		&:hover {
 			background-color: $color-span;
 			opacity: 0.8;
+			border-radius: 15px;
 
 		}
 
@@ -146,6 +150,7 @@
   		text-shadow: 1px 1px 1px white;
   	}
   }
+
 }
 
 
@@ -774,10 +779,10 @@ p {
  		overflow: hidden;
  		.first_page{
  			width: 100%;
- 			padding: 32px 52px;
+ 			padding: 80px 0;
  			.menu-container {
- 				left: 80%;
- 				top: -55px;
+ 				
+ 				
  			}
  			h1 {
  				margin-top: 230px;
@@ -842,9 +847,7 @@ p {
  }
  @media (max-width: 850px) {
 .container {
-	   .first_page{
-		padding: 32px 15px;
-	   } 
+	   
  	.second_page{
 		.card_desk {
 			width: 262px;
@@ -1014,7 +1017,17 @@ p {
 	.container {
 		.first_page {
 			.menu-container {
-				left: 70%; }
+				.menu {
+
+				li {
+					display: block;
+					padding-left: 30%;
+				}
+			}
+			.menu.active {
+				display: block;
+			}
+				 }
 				.form {
 					width: 300px;
 					.field {
@@ -1057,10 +1070,7 @@ p {
 @media (max-width: 360px) {
 	.container {
 		.first_page {
-		.menu-container{
-			left: 60%;
-			top: -55px;
-		}
+
 		h1 {
 			width: 280px;
 			font-size: $font-size2 - 10px;

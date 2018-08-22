@@ -51,8 +51,8 @@
   .container .first_page header {
     font-family: 'OpenSans-SemiBold', sans-serif;
     font-size: 38px;
-    display: inline-flex;
-    justify-content: space-between; }
+    display: flex;
+    justify-content: flex-end; }
     .container .first_page header .logo {
       border: solid 3.5px #170f1c;
       opacity: 0.6;
@@ -62,25 +62,18 @@
     position: fixed;
     z-index: 10;
     top: -10px;
-    left: 90%;
+    left: 0;
     height: 40px; }
     .container .first_page .menu-container button {
       border: none;
       background-color: transparent; }
     .container .first_page .menu-container .toggle-menu {
-      position: absolute;
-      top: 92px;
-      left: 0;
-      margin-left: 60px;
-      display: block;
-      height: 35px;
-      width: 35px;
-      margin-bottom: 2px; }
+      position: absolute; }
     .container .first_page .menu-container label[for="toggle-menu"] {
       position: absolute;
-      margin-left: 60px;
+      margin-left: 10px;
       opacity: 0.6;
-      top: 92px;
+      top: 102px;
       z-index: 2;
       height: 35px;
       width: 35px;
@@ -88,9 +81,14 @@
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
       background-size: contain; }
     .container .first_page .menu-container .menu.active {
-      display: block;
-      width: 100px;
-      border: none; }
+      position: absolute;
+      top: -82px;
+      display: flex;
+      justify-content: space-around;
+      width: 98.5vw;
+      border: none;
+      padding: 70px 50px 50px;
+      box-sizing: border-box; }
     .container .first_page .menu-container .menu {
       display: none;
       padding: 0;
@@ -101,13 +99,16 @@
       border-radius: 5px;
       width: 100px;
       margin-top: 92px;
-      box-shadow: 12px 14px 15px gray; }
+      box-shadow: 12px 14px 15px lightgray; }
       .container .first_page .menu-container .menu li {
+        display: inline-block;
+        margin-right: 20px;
         padding: 5px;
         transition: all 0.3s; }
         .container .first_page .menu-container .menu li:hover {
           background-color: rgba(252, 103, 68, 0.94);
-          opacity: 0.8; }
+          opacity: 0.8;
+          border-radius: 15px; }
         .container .first_page .menu-container .menu li a {
           text-decoration: none;
           font-size: 16px;
@@ -564,10 +565,7 @@
     overflow: hidden; }
     .container .first_page {
       width: 100%;
-      padding: 32px 52px; }
-      .container .first_page .menu-container {
-        left: 80%;
-        top: -55px; }
+      padding: 80px 0; }
       .container .first_page h1 {
         margin-top: 230px; }
     .container .third_page {
@@ -603,8 +601,6 @@
   .container .seven_page .webs {
     width: 600px; } }
 @media (max-width: 850px) {
-  .container .first_page {
-    padding: 32px 15px; }
   .container .second_page .card_desk {
     width: 262px;
     margin: 0 auto; }
@@ -689,8 +685,11 @@
   .container footer .finish .icons a {
     margin-bottom: 10px; } }
 @media (max-width: 750px) {
-  .container .first_page .menu-container {
-    left: 70%; }
+  .container .first_page .menu-container .menu li {
+    display: block;
+    padding-left: 30%; }
+  .container .first_page .menu-container .menu.active {
+    display: block; }
   .container .first_page .form {
     width: 300px; }
     .container .first_page .form .field {
@@ -708,9 +707,6 @@
   .container footer {
     height: 400px; } }
 @media (max-width: 360px) {
-  .container .first_page .menu-container {
-    left: 60%;
-    top: -55px; }
   .container .first_page h1 {
     width: 280px;
     font-size: 40px; }
