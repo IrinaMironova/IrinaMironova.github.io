@@ -74,9 +74,11 @@
 		top: -10px;
 		left: 90%;
 		height: 40px;
+
 		button {
   		border: none;
   		background-color: transparent;
+  		
 }
 			.toggle-menu {
   			position: absolute;
@@ -100,6 +102,7 @@
   			cursor: pointer;
   			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
   			background-size: contain;
+
 }
 .menu.active {
 		display: block;
@@ -113,14 +116,18 @@
 	text-align: left;
 	list-style: none;
   	background-color: gray;
-  	width: 130px;
+  	border-radius: 5px;
+  	width: 100px;
   	margin-top: 92px;
+  	box-shadow: 12px 14px 15px gray;
+
   li{
 		padding: 5px;
 		transition: all 0.3s;
 		&:hover {
 			background-color: $color-span;
 			opacity: 0.8;
+
 		}
 
   		a{
@@ -128,7 +135,11 @@
   		font-size: $font-size1;
   		text-transform: uppercase;
   		color: white;
+  		font-style: italic;
+  		font-weight: bold;
+  		letter-spacing: 1px;
   		line-height: 0.8;
+  		text-shadow: 1px 1px 1px white;
   	}
   }
 }
@@ -665,11 +676,35 @@ p {
  		.btn {
  			@extend %btn;
  			width: 238px;
- 			margin: 0 auto;	
+ 			margin: 0 auto;
+ 			a{
+ 				text-decoration: none;
+ 			}		
  			button {
  				background-color: #fdfdfd;
  				color: #000000;
- 		}
+    				}
+    				span { position: relative;
+    					color: #000000;
+    				}
+ 				[data-tooltip]::after {
+ 					content: attr(data-tooltip); /* Выводим текст */
+    				position: absolute;
+    				border-radius: 5px;
+    				left: 40px;
+    				top: -25px;
+    				width: 200px;
+    				background: lightgray; 
+    				color: black;
+    				padding: 3px;
+    				font-size: $font-size1 + 4px;
+    				opacity: 0;
+ 				}
+ 				[data-tooltip]:hover::after  {		
+   				opacity: 1;
+   						}
+ 			}
+ 		
  		}
  		.finish {
  			display: flex;
@@ -725,8 +760,9 @@ p {
 				color: rgba(4, 4, 4, 0.6);
 			}
  		}
- 	}
+
  }
+
  @media (max-width: 1530px) {
  	.container {
  		width: 100%;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'OpenSans-SemiBold', sans-serif;
   src: url("../fonts/OpenSans-SemiBold.ttf"); }
@@ -94,8 +95,10 @@
       text-align: left;
       list-style: none;
       background-color: gray;
-      width: 130px;
-      margin-top: 92px; }
+      border-radius: 5px;
+      width: 100px;
+      margin-top: 92px;
+      box-shadow: 12px 14px 15px gray; }
       .container .first_page .menu-container .menu li {
         padding: 5px;
         transition: all 0.3s; }
@@ -107,7 +110,11 @@
           font-size: 16px;
           text-transform: uppercase;
           color: white;
-          line-height: 0.8; }
+          font-style: italic;
+          font-weight: bold;
+          letter-spacing: 1px;
+          line-height: 0.8;
+          text-shadow: 1px 1px 1px white; }
   .container .first_page h1 {
     color: rgba(98, 98, 98, 0.94);
     width: 680px;
@@ -484,48 +491,68 @@
   .container footer .btn {
     width: 238px;
     margin: 0 auto; }
+    .container footer .btn a {
+      text-decoration: none; }
     .container footer .btn button {
       background-color: #fdfdfd;
       color: #000000; }
-  .container footer .finish {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 30%;
-    margin: 50px auto; }
-    .container footer .finish .icons {
-      font-size: 0;
-      width: 200px; }
-      .container footer .finish .icons a {
-        display: inline-block;
-        width: 33px;
-        height: 33px;
-        background-image: url(../images/icons.png);
-        background-repeat: no-repeat;
-        margin-right: 16px;
-        border-radius: 50%; }
-      .container footer .finish .icons .fb {
-        background-position: -226px -54px; }
-        .container footer .finish .icons .fb:hover {
-          background-position: -226px -129px; }
-      .container footer .finish .icons .twit {
-        background-position: -340px -54px; }
-        .container footer .finish .icons .twit:hover {
-          background-position: -340px -129px; }
-      .container footer .finish .icons .drib {
-        background-position: -111px -54px; }
-        .container footer .finish .icons .drib:hover {
-          background-position: -111px -129px; }
-      .container footer .finish .icons .LinkedIn {
-        background-position: -398px -54px; }
-        .container footer .finish .icons .LinkedIn:hover {
-          background-position: -398px -129px; }
-    .container footer .finish p {
-      width: 210px;
-      opacity: 0.6;
-      color: rgba(4, 4, 4, 0.6); }
+    .container footer .btn span {
+      position: relative;
+      color: #000000; }
+    .container footer .btn [data-tooltip]::after {
+      content: attr(data-tooltip);
+      /* Выводим текст */
+      position: absolute;
+      border-radius: 5px;
+      left: 40px;
+      top: -25px;
+      width: 200px;
+      background: lightgray;
+      color: black;
+      padding: 3px;
+      font-size: 20px;
+      opacity: 0; }
+    .container footer .btn [data-tooltip]:hover::after {
+      opacity: 1; }
+.container .finish {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin: 50px auto; }
+  .container .finish .icons {
+    font-size: 0;
+    width: 200px; }
+    .container .finish .icons a {
+      display: inline-block;
+      width: 33px;
+      height: 33px;
+      background-image: url(../images/icons.png);
+      background-repeat: no-repeat;
+      margin-right: 16px;
+      border-radius: 50%; }
+    .container .finish .icons .fb {
+      background-position: -226px -54px; }
+      .container .finish .icons .fb:hover {
+        background-position: -226px -129px; }
+    .container .finish .icons .twit {
+      background-position: -340px -54px; }
+      .container .finish .icons .twit:hover {
+        background-position: -340px -129px; }
+    .container .finish .icons .drib {
+      background-position: -111px -54px; }
+      .container .finish .icons .drib:hover {
+        background-position: -111px -129px; }
+    .container .finish .icons .LinkedIn {
+      background-position: -398px -54px; }
+      .container .finish .icons .LinkedIn:hover {
+        background-position: -398px -129px; }
+  .container .finish p {
+    width: 210px;
+    opacity: 0.6;
+    color: rgba(4, 4, 4, 0.6); }
 
 @media (max-width: 1530px) {
   .container {

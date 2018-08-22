@@ -1,10 +1,10 @@
+
 var menu = document.getElementById("menu");
 var toggleMenu = document.getElementById("toggle-menu");
 
-toggleMenu.addEventListener("click", function() {
+toggleMenu.addEventListener("focusin", function() {
   showMenu();
 });
-
 function showMenu() {	
 	menu.classList.toggle("active");
 };
