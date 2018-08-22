@@ -40,6 +40,8 @@
     .container .first_page .form .btn button:hover, .container .second_page .card_desk .cards .btn button:hover, .container .fourth_page .content .side_app .btn button:hover, .container footer .btn button:hover {
       box-shadow: 1.9px 10.8px 20px 0 rgba(20, 20, 21, 0.4); }
 
+.container a {
+  text-decoration: none; }
 .container span {
   color: rgba(252, 103, 68, 0.94); }
 .container .first_page {
@@ -512,7 +514,8 @@
       color: black;
       padding: 3px;
       font-size: 20px;
-      opacity: 0; }
+      opacity: 0;
+      transition: all 1s; }
     .container footer .btn [data-tooltip]:hover::after {
       opacity: 1; }
 .container .finish {

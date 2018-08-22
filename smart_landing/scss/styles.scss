@@ -48,6 +48,9 @@
 
 }
  .container {
+ 	a {
+ 		text-decoration: none;
+ 	}
  	span{
 
 			color: $color-span;
@@ -700,6 +703,7 @@ p {
     				padding: 3px;
     				font-size: $font-size1 + 4px;
     				opacity: 0;
+    				transition: all 1s;
  				}
  				[data-tooltip]:hover::after  {		
    				opacity: 1;
