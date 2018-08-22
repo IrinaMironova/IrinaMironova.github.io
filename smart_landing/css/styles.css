@@ -58,6 +58,7 @@
       line-height: 0.6; }
   .container .first_page .menu-container {
     position: fixed;
+    z-index: 10;
     top: -10px;
     left: 90%;
     height: 40px; }
