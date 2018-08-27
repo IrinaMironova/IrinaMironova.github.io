@@ -1,13 +1,7 @@
 
-var menu = document.getElementById("menu");
-var toggleMenu = document.getElementById("toggle-menu");
-
-toggleMenu.addEventListener("focusin", function() {
-  showMenu();
+$(".menu-collapsed").click(function() {
+  $(this).toggleClass("menu-expanded");
 });
-function showMenu() {	
-	menu.classList.toggle("active");
-};
 $('.owl-carousel1').owlCarousel({
     loop:true,
     margin: 10,
@@ -20,14 +14,11 @@ $('.owl-carousel1').owlCarousel({
             items:2
         },
         1520: {
-           items:3
-        }
-    }
+         items:3
+     }
+ }
 });
-$( ".owl-prev>span" ).addClass( "prev" );
-$('.prev').replaceWith('<span aria-label="Previous">Previous</span>');
-$( ".owl-next>span" ).addClass( "next" );
-$('.next').replaceWith('<span aria-label="Next">Next</span>');
+
 $('.owl-carousel2').owlCarousel({
     loop:true,
     margin:10,
