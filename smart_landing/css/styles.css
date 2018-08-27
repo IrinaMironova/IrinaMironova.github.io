@@ -732,7 +732,7 @@
     margin-bottom: 10px; } }
 @media (max-width: 750px) {
   .container .first_page .menu-expanded {
-    height: 90vh;
+    height: 80vh;
     width: 100vw; }
     .container .first_page .menu-expanded ul {
       flex-direction: column;
