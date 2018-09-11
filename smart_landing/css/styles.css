@@ -754,32 +754,42 @@
   .container footer {
     height: 250px; } }
 @media (max-width: 360px) {
-  .container .first_page .menu-expanded {
-    height: 100vh;
-    width: 100vw; }
-  .container .first_page h1 {
-    width: 280px;
-    font-size: 40px; }
-  .container .first_page p {
-    width: 280px;
-    font-size: 14px; }
-  .container .first_page .form {
-    width: 280px; }
-    .container .first_page .form .field {
-      width: 230px; }
-  .container .second_page h1 {
-    width: 180px;
-    font-size: 40px; }
-  .container .second_page p {
-    width: 280px;
-    font-size: 14px; }
-  .container .third_page h1 {
-    font-size: 40px; }
-  .container .third_page p {
-    width: 280px;
-    font-size: 14px; }
+  .container .first_page {
+    padding-left: 35px;
+    box-sizing: border-box; }
+    .container .first_page .menu-expanded {
+      height: 100vh;
+      width: 100vw; }
+    .container .first_page h1 {
+      width: 280px;
+      font-size: 40px; }
+    .container .first_page p {
+      width: 280px;
+      font-size: 14px; }
+    .container .first_page .form {
+      width: 280px; }
+      .container .first_page .form .field {
+        width: 230px; }
+  .container .second_page {
+    padding-left: 35px;
+    box-sizing: border-box; }
+    .container .second_page h1 {
+      width: 180px;
+      font-size: 40px; }
+    .container .second_page p {
+      width: 280px;
+      font-size: 14px; }
+  .container .third_page {
+    padding-left: 35px;
+    box-sizing: border-box; }
+    .container .third_page h1 {
+      font-size: 40px; }
+    .container .third_page p {
+      width: 280px;
+      font-size: 14px; }
   .container .fourth_page {
-    height: 500px; }
+    padding-left: 38px;
+    box-sizing: border-box; }
     .container .fourth_page h1 {
       width: 180px;
       font-size: 40px; }
@@ -791,41 +801,50 @@
       width: 280px; }
       .container .fourth_page .content .side_img {
         display: none; }
-  .container .fifth_page h1 {
-    width: 180px;
-    font-size: 40px; }
-  .container .fifth_page p {
-    width: 280px;
-    font-size: 14px; }
-  .container .fifth_page .owl-carousel {
-    width: 280px; }
-    .container .fifth_page .owl-carousel img.two {
+  .container .fifth_page {
+    padding-left: 38px;
+    box-sizing: border-box;
+    height: 900px; }
+    .container .fifth_page h1 {
+      width: 180px;
+      font-size: 40px; }
+    .container .fifth_page p {
       width: 280px;
-      margin-left: 0; }
-  .container .six_page h1 {
-    width: 180px;
-    text-align: center;
-    font-size: 40px; }
-  .container .six_page p {
-    width: 280px;
-    margin: 16px auto;
-    font-size: 14px; }
-  .container .six_page .com {
-    width: 280px;
-    margin: 39px auto; }
-    .container .six_page .com .owl-carousel {
+      font-size: 14px; }
+    .container .fifth_page .owl-carousel {
       width: 280px; }
-      .container .six_page .com .owl-carousel .comments .info {
-        margin-left: 25px;
-        padding: 45px 10px 0; }
-        .container .six_page .com .owl-carousel .comments .info p {
-          width: 170px; }
-      .container .six_page .com .owl-carousel .comments .photo {
-        left: 95px; }
-      .container .six_page .com .owl-carousel .owl-prev {
-        left: -10px; }
-      .container .six_page .com .owl-carousel .owl-next {
-        right: -15px; }
+      .container .fifth_page .owl-carousel img {
+        width: 280px;
+        margin-left: 0; }
+      .container .fifth_page .owl-carousel .owl-item .hid {
+        width: 280px; }
+  .container .six_page {
+    padding-left: 30px;
+    box-sizing: border-box; }
+    .container .six_page h1 {
+      width: 180px;
+      text-align: center;
+      font-size: 40px; }
+    .container .six_page p {
+      width: 280px;
+      margin: 16px auto;
+      font-size: 14px; }
+    .container .six_page .com {
+      width: 280px;
+      margin: 39px auto; }
+      .container .six_page .com .owl-carousel {
+        width: 280px; }
+        .container .six_page .com .owl-carousel .comments .info {
+          margin-left: 25px;
+          padding: 45px 10px 0; }
+          .container .six_page .com .owl-carousel .comments .info p {
+            width: 170px; }
+        .container .six_page .com .owl-carousel .comments .photo {
+          left: 95px; }
+        .container .six_page .com .owl-carousel .owl-prev {
+          left: -10px; }
+        .container .six_page .com .owl-carousel .owl-next {
+          right: -15px; }
   .container .seven_page {
     height: 400px; }
     .container .seven_page .webs {

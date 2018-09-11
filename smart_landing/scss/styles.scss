@@ -1129,7 +1129,10 @@
 		}
 		@media (max-width: 360px) {
 			.container {
+
 				.first_page {
+					padding-left: 35px;
+    				box-sizing: border-box;
 					.menu-expanded {
 						height: 100vh;
 						width: 100vw;
@@ -1151,7 +1154,8 @@
 					}
 				}
 				.second_page {
-					
+					padding-left: 35px;
+    				box-sizing: border-box;
 					h1 {
 						width: 180px;
 						font-size: $font-size2 - 10px;
@@ -1162,6 +1166,8 @@
 					}
 				}
 				.third_page {
+					padding-left: 35px;
+    				box-sizing: border-box;
 					h1 {
 						
 						font-size: $font-size2 - 10px;
@@ -1172,7 +1178,9 @@
 					}
 				}
 				.fourth_page {
-					height: 500px;
+					padding-left: 38px;
+    				box-sizing: border-box;
+					
 					h1 {
 						width: 180px;
 						font-size: $font-size2 - 10px;
@@ -1190,7 +1198,9 @@
 					}
 				}
 				.fifth_page {
-					
+					padding-left: 38px;
+    				box-sizing: border-box;
+    				height: 900px;
 					h1 {
 						width: 180px;
 						font-size: $font-size2 - 10px;
@@ -1201,14 +1211,20 @@
 					}
 					.owl-carousel {
 						width: 280px;
-						img.two {
+						img {
 							width: 280px;
 							margin-left: 0;
 						}
+						.owl-item{
+						.hid {
+							width: 280px;
+						}
+					}
 					}
 				}
 				.six_page {
-					
+					padding-left: 30px;
+    				box-sizing: border-box;
 					h1 {
 						width: 180px;
 						text-align: center;
