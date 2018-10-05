@@ -25,22 +25,22 @@
 			
 		}
 		%btn {
-			margin: 20px auto 0;
-			button {
-				display: inline-flex;
-				justify-content: space-around;
-				width: 238px;
-				padding: 0 55px;
+			margin: 42px auto 0;
+			width: 238px;
+			height: 55px;
+			a {
+				padding: 17px 60px;
 				font-family: OpenSans;
 				font-size: $font-size1;
-				height: 55px;
 				border-radius: 27px;
 				box-shadow: 1.9px 10.8px 20px 0 rgba(20, 20, 21, 0.08);
-				
+				background-color: white;
 				border: solid 1px rgba(1, 2, 2, 0.07);
-				color: white;
-				opacity: 0.9;
+				color: rgba(0, 0, 0, 0.6);
 				transition: all 1s;
+				i {
+					padding-right: 5px;
+				}
 				&:hover {
 					box-shadow: 1.9px 10.8px 20px 0 rgba(20, 20, 21, 0.4);
 				}
@@ -217,8 +217,13 @@
 					.btn {
 						@extend %btn;
 						width: 238px;
-						button{
+						opacity: 0.9;
+						a {
+							color: white;
 							background-color: #ff5c36;
+							i {
+								padding-right: 0;
+							}
 						}
 					}
 
@@ -269,7 +274,7 @@
 							@extend %p;
 							width: 197px;
 							color: white;
-							margin: 0 auto;
+							margin: 0 auto 60px;
 							opacity: 0.75;
 						}
 						.btn {
@@ -277,13 +282,7 @@
 
 							margin: 42px auto 0;
 							width: 228px;
-							button{
-								align-items: center;
-								width: 228px;
-								background-color: white;
-								color: rgba(0, 0, 0, 0.6);
-								opacity:1;
-							}
+							
 						}
 
 					}
@@ -401,12 +400,6 @@
 							@extend %btn;
 							width: 238px;
 							margin: 41px 0 0;
-							button{
-								color: rgba(0, 0, 0, 0.7);
-								box-shadow: 1.9px 10.8px 20px 0 rgba(20, 20, 21, 0.07);
-								background-color: #ffffff;
-								border: solid 1px rgba(1, 2, 2, 0.07);
-							}
 						}
 					}
 				}
@@ -739,14 +732,10 @@
 				.btn {
 					@extend %btn;
 					width: 238px;
-					margin: 0 auto;
+					
 					a{
-						text-decoration: none;
-					}		
-					button {
-						background-color: #fdfdfd;
-						color: #000000;
-					}
+						padding: 17px 82px;
+					}	
 					span { position: relative;
 						color: #000000;
 					}
@@ -755,11 +744,11 @@
 						position: absolute;
 						border-radius: 5px;
 						left: 40px;
-						top: -25px;
-						width: 200px;
+						top: -30px;
+						width: 148px;
 						background: lightgray; 
 						color: black;
-						padding: 3px;
+						padding: 5px;
 						font-size: $font-size1 + 4px;
 						opacity: 0;
 						transition: all 1s;
@@ -832,8 +821,10 @@
 				width: 100%;
 				overflow: hidden;
 				.first_page{
+					height: 1080px;
 					width: 100%;
-					padding: 80px 0;
+					padding: 80px 0 0 20px;
+   					 box-sizing: border-box;
 					h1 {
 						margin-top: 230px;
 					}
@@ -1125,6 +1116,9 @@
 				footer {
 					height: 250px;
 				}
+				.finish {
+					width: 220px;
+				}
 			}
 		}
 		@media (max-width: 360px) {
@@ -1276,5 +1270,7 @@
 				footer {
 					height: 350px;
 				}
+				
+
 			}
 		}
