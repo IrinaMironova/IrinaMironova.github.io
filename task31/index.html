@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="field" id = "field">
+			<form action="#" method="post" class="form">
+				<input type="text" id="new" placeholder="Write something to add">
+				<button id="add">add</button>
+			</form>
+			<button id="show" class='btn hide'>hide</button>
+			<button id="hide" class='btn show hidden'>show</button>
+		</div>
+		<ul></ul>
+		<template id="tmpl">
+			<li> 
+				<span id="replace">todo</span>
+				<span class="check"> ✓ </span> 
+				<span class="close"> x </span> 
+			</li>
+		</template>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.container {
+	font-family: Georgia;
+	font-size: 36px;
+	text-shadow: 2px 2px 5px gray;
+}
+.field {
+	width: 600px;
+	display: flex;
+	flex-flow: row;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+button {
+	padding: 8px;
+	border-radius: 15%;
+	width: 50px;
+	height: 40px;
+}
+
+.form {
+	width: 550px;
+	height: 56px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+	input {
+		width: 470px;
+		padding: 10px;
+		border-radius: 5%;
+	}
+	
+}
+ul {
+	width: 80%;
+	list-style-type: none;
+	margin: 200px auto;
+	padding: 0;
+	li {
+		height: 30px;
+		background: #eee;
+		padding: 23px;
+		position: relative;
+		&:nth-child(odd) {
+			background: #f9f9f9;
+		}
+		&:hover {
+			background: #ddd;
+		}
+	}
+	
+}
+li.checked {
+	opacity: 0.3;
+	text-decoration: line-through;
+}
+span.close,
+span.check {
+	color: darkgray;
+	font-size: 55px;
+	cursor: pointer;
+}
+.check {
+	position: absolute;
+	right: 55px;
+	top: 10px;
+	font-size: 38px;
+	&:hover {
+		color: white;
+	}
+}
+.close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+
+}
+
+.close:hover {
+	color: white;
+}
+.hidden {
+	display: none;
+}
