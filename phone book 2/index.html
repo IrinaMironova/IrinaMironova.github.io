@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="list">
+			<img src="img/add2.png" alt="add" id="plus">
+			<ul></ul>
+		</div>
+		<div class="field hidden" id="field">
+			<figure>
+				<img src="img/correct.png" alt="correct" id="save" class="icon_correct ">
+				<img src="img/basket.png" alt="delete" class="icon_delete ">
+			</figure>
+			<form action="#" method="post" class="form">
+				<input type="text" id="name" placeholder="Name" required="">
+				<div class="telNumbers">
+					<input type="tel" class="tel" placeholder="Telephone №" required>
+					<img src="img/add2.png" alt="add" id="plusTel" required="">
+				</div>
+				
+				<input type="text" id="company" placeholder="Company" required="">
+				<label for="bday">Enter your birthday:</label>
+				<input type="date" id="bday" name="bday" required="">
+			</form>
+		</div>
+		<div class="birthPerson">
+			<img src="img/birth.png" alt="birthday">
+			<span id="b_text">Today is the birthday of </span>
+		</div>
+	</div>
+	<template id="tmpl">
+		<li>
+			<div class="li">
+				<span class="replace">name1</span>
+				<img src="img/pencil.png" alt="edit" class="icon_edit">
+			</div>
+			
+		</li>
+	</template>
+	<template id="tmpl_info">
+		<div class="info hidden">
+			<span class="label">Tel: </span>
+			<div class="arrayTelNumbers" id="arrayTelNumbers">
+				<span class="number first">1</span>
+			</div>
+			<span class="label">Company: </span>
+			<span class="job">2</span>
+			<span class="label">Date of birth</span>
+			<div class="birth">
+				<span class="hidden date"></span>
+				<span class="birthday">3</span>
+				<span>.</span>
+				<span class="birthmonth">3</span>
+				<span>.</span>
+				<span class="birthyear">3</span>
+			</div>
+			
+
+		</div>
+	</template>
+
+	<template id="tel_info">
+		<div>
+			<span  class="number">1</span>
+		</div>
+	</template>
+
+	<script src="script.js"></script>
+</body>
+</html>
