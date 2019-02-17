@@ -93,6 +93,7 @@ img {
   width: 150px;
   height: 150px;
   border: 1px solid white;
+  border-radius: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -100,8 +101,8 @@ img {
   .birthPerson img {
     width: 40px;
     height: 40px; }
-  .birthPerson .b_name {
-    margin-right: 3px; }
+  .birthPerson span {
+    padding-right: 3px; }
 
 .info {
   width: 200px;
@@ -119,5 +120,37 @@ img {
 
 .hidden {
   display: none; }
+
+@media (max-width: 550px) {
+  .container {
+    flex-direction: column;
+    align-items: center; }
+    .container .list {
+      width: 250px;
+      height: 420px; }
+      .container .list .li {
+        width: 220px; }
+
+  .field {
+    width: 250px;
+    height: 420px;
+    padding: 10px;
+    margin-top: 10px;
+    background-image: none;
+    background-color: rgba(207, 192, 152, 0.3);
+    box-shadow: 3px 3px 12px 10px grey;
+    border-radius: 5%;
+    padding: 10px; }
+    .field .form {
+      width: 250px; }
+      .field .form input {
+        width: 220px; }
+
+  .birthPerson {
+    width: 200px;
+    height: 80px; }
+
+  .info {
+    width: 125px; } }
 
 /*# sourceMappingURL=styles.css.map */

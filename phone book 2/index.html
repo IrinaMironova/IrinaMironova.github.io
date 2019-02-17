@@ -5,6 +5,8 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
 	<div class="container">
@@ -18,20 +20,20 @@
 				<img src="img/basket.png" alt="delete" class="icon_delete ">
 			</figure>
 			<form action="#" method="post" class="form">
-				<input type="text" id="name" placeholder="Name" required="">
+				<input type="text" id="name" placeholder="Full name" required>
 				<div class="telNumbers">
 					<input type="tel" class="tel" placeholder="Telephone №" required>
-					<img src="img/add2.png" alt="add" id="plusTel" required="">
+					<img src="img/add2.png" alt="add" id="plusTel">
 				</div>
 				
-				<input type="text" id="company" placeholder="Company" required="">
+				<input type="text" id="company" placeholder="Company" required>
 				<label for="bday">Enter your birthday:</label>
-				<input type="date" id="bday" name="bday" required="">
+				<input type="date" id="bday" name="bday" required>
 			</form>
 		</div>
 		<div class="birthPerson">
 			<img src="img/birth.png" alt="birthday">
-			<span id="b_text">Today is the birthday of </span>
+			<span class="b_text">Today is the birthday of </span>
 		</div>
 	</div>
 	<template id="tmpl">
@@ -47,7 +49,6 @@
 		<div class="info hidden">
 			<span class="label">Tel: </span>
 			<div class="arrayTelNumbers" id="arrayTelNumbers">
-				<span class="number first">1</span>
 			</div>
 			<span class="label">Company: </span>
 			<span class="job">2</span>
@@ -62,12 +63,6 @@
 			</div>
 			
 
-		</div>
-	</template>
-
-	<template id="tel_info">
-		<div>
-			<span  class="number">1</span>
 		</div>
 	</template>
 

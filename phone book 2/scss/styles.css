@@ -19,7 +19,8 @@
   background-color: rgba(207, 192, 152, 0.3);
   box-shadow: 3px 3px 12px 10px gray;
   border-radius: 5%;
-  padding: 10px; }
+  padding: 10px;
+  overflow: auto; }
   .list #plus {
     float: right; }
   .list ul {
@@ -84,7 +85,11 @@ img {
     width: 20px;
     height: 20px; }
 
-.birth {
+.arrayTelNumbers {
+  display: flex;
+  flex-direction: column; }
+
+.birthPerson {
   width: 150px;
   height: 150px;
   border: 1px solid white;
@@ -92,9 +97,11 @@ img {
   flex-flow: row wrap;
   justify-content: center;
   text-align: center; }
-  .birth img {
+  .birthPerson img {
     width: 40px;
     height: 40px; }
+  .birthPerson .b_name {
+    margin-right: 3px; }
 
 .info {
   width: 200px;
@@ -112,5 +119,9 @@ img {
 
 .hidden {
   display: none; }
+
+@media (max-width: 320px) {
+  .container {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,24 +3,23 @@ const field = document.querySelector('.field');
 const list = document.querySelector('.list');
 const iconDelete = document.querySelector('.icon_delete');
 const save = document.querySelector('#save');
-
 const template = document.querySelector('#tmpl');
 const templateInfo = document.querySelector('#tmpl_info');
-const templateTel = document.querySelector('#tel_info');
-
 const ul = document.querySelector('ul');
 const name = document.querySelector('#name');
-
 const company = document.querySelector('#company');
 const bday = document.querySelector('#bday');
 const dateMonth = new Date().getMonth();
 const dateDay = new Date().getDate();
 
-
 plus.addEventListener('click', function() {
 	const inputAdded = document.querySelectorAll('.added');
+	const imgAdded = document.querySelectorAll('.remove');
 	if(inputAdded) {
 		inputAdded.forEach(function(item) {
+			item.remove();
+		});
+		imgAdded.forEach(function(item) {
 			item.remove();
 		});
 	}
@@ -32,52 +31,55 @@ save.addEventListener('click', () => {
 	let liTempl = template.content.querySelector("li");
 	let newText = template.content.querySelector(".replace");
 	newText.textContent = name.value.trim();
+
 	let clone = document.importNode(liTempl, true);
-
 	let divTempl = templateInfo.content.querySelector("div");
-	
-	const newTel = templateInfo.content.querySelectorAll(".number");
 
-	for (let i = 0; i < document.querySelectorAll('.tel').length; i ++) {
-		newTel[i].textContent = document.querySelectorAll('.tel')[i].value;
-	}
+	const newComp = templateInfo.content.querySelector(".job")
+	newComp.textContent = company.value.trim();
 
-	const newComp = templateInfo.content.querySelectorAll(".job")
-	newComp.forEach(function(item) {
-		item.textContent = company.value.trim();
-	})
-	
-	const hidDate = templateInfo.content.querySelectorAll('.date');
-	hidDate.forEach(function(item) {
-		item.textContent = bday.value;
-	})
+	const hidDate = templateInfo.content.querySelector('.date');
+	hidDate.textContent = bday.value;
 
 	const newB = templateInfo.content.querySelectorAll(".birthday");
-	newB.forEach(function(item) {
-		item.textContent = bday.valueAsDate.getDate();
-	})
 	const newMonth = templateInfo.content.querySelectorAll(".birthmonth");
-	newMonth.forEach(function(item) {
-		item.textContent = bday.valueAsDate.getMonth() + 1;
-	});
-
 	const newYear = templateInfo.content.querySelectorAll(".birthyear");
-	newYear.forEach(function(item) {
-		item.textContent = bday.valueAsDate.getFullYear();
-	});
+
+	if (bday.valueAsDate !== null) {
+		newB.forEach(function(item) {
+			item.textContent = bday.valueAsDate.getDate();
+		})
+		newMonth.forEach(function(item) {
+			item.textContent = bday.valueAsDate.getMonth() + 1;
+		});
+		newYear.forEach(function(item) {
+			item.textContent = bday.valueAsDate.getFullYear();
+		});
+	}
+
 	let cloneSec = document.importNode(divTempl, true);
 
-	if (newText.textContent === '' || newTel.textContent === '' || newComp.textContent === '' || newB.textContent === '') {
+	if (newText.textContent === '' || newComp.textContent === '' || newB.textContent === '') {
 		alert("please fill all fields!");
 	} else {
-		ul.appendChild(clone);
-		const liAdd = document.querySelectorAll('li');
-		liAdd.forEach((item) => {
-			item.appendChild(cloneSec);
-		});
+		const tel = document.querySelectorAll('.tel');
+				
+		for (let i = 0; i < tel.length; i ++) {
+			const newSpan = document.createElement('span');
+			newSpan.classList.add('number');
+			newSpan.textContent = tel[i].value;
+			if(newSpan.textContent === '') {
+				alert("please fill all number fields!");
+			} else {
+				const liAdd = ul.appendChild(clone);
+				liAdd.appendChild(cloneSec);
+				const parent = liAdd.childNodes[3].childNodes[3];
+				parent.appendChild(newSpan);
+			}
+		}
 		toggle();
-		
 	}
+
 	const bDay = document.querySelectorAll('.birthday');
 	const bMonth = document.querySelectorAll('.birthmonth');
 	const bName = document.createElement('span');
@@ -85,24 +87,25 @@ save.addEventListener('click', () => {
 
 	for(let i = 0; i < bDay.length; i++) {
 		if(+bDay[i].textContent === dateDay && +bMonth[i].textContent === dateMonth + 1) {
-			const t = document.querySelector('.birthPerson').appendChild(bName);
-			t.textContent = document.querySelectorAll('.replace')[i].textContent + ' ';
-
+			const textName = document.querySelector('.birthPerson').appendChild(bName);
+			textName.textContent = document.querySelectorAll('.replace')[i].textContent + ' ';
 		} 
 	};
 	const arrayBirth = document.querySelectorAll('.b_name');
-	arrayBirth.forEach(function(item) {
-		if (item.textContent === item.previousElementSibling.textContent) {
-			item.remove();
+	
+	for(let j = 0; j < document.querySelectorAll('.b_name').length; j++) {
+		for(let i = j + 1; i < document.querySelectorAll('.b_name').length; i++) {
+			if( arrayBirth[i].textContent === arrayBirth[j].textContent) {
+				arrayBirth[i].remove();
+			} 
 		}
-	})
+	};
 	localStorage.setItem('BirthItems', document.querySelector('.birthPerson').innerHTML);
 	localStorage.setItem('ContactItems', document.querySelector('ul').innerHTML);
-	
 });
 
+
 ul.addEventListener('click', ({target}) => {
-	const info = target.parentNode.nextElementSibling;
 	if ((target.classList.contains('li'))) {
 		target.nextElementSibling.classList.toggle('hidden');
 	}
@@ -111,19 +114,28 @@ ul.addEventListener('click', ({target}) => {
 	}
 	if ((target.classList.contains('icon_edit'))) {
 		toggle();
+		const info = target.parentNode.nextElementSibling;
 		name.value = target.previousElementSibling.textContent;
-		let j = 1;
-		for (let i = 0; i < document.querySelectorAll('.tel').length; i++) {
-			if( j % 2) {
-				document.querySelectorAll('.tel')[i].value = info.childNodes[3].childNodes[j].textContent;
-				j++;
+		let j = 0;
+		console.log(info.children[1].children.length, document.querySelectorAll('.tel').length)
+		for (let i = 0; i < info.children[1].children.length; i++) {
+			if(document.querySelectorAll('.tel').length > info.children[1].children.length) {
+				document.querySelectorAll('.added').forEach(function(item) {
+					item.remove();
+				});
+				document.querySelectorAll('.remove').forEach(function(item) {
+					item.remove();
+				});
+			} else if (document.querySelectorAll('.tel').length < info.children[1].children.length) {
+				addInput();
 			}
-		}
-		company.value = info.childNodes[7].textContent;
-		bday.value = info.childNodes[11].childNodes[1].textContent;
+			document.querySelectorAll('.tel')[i].value = info.children[1].children[j].textContent
+			j++;
+		};
+		company.value = info.children[3].textContent;
+		bday.value = info.children[5].children[0].textContent;
 		ul.removeChild(target.parentNode.parentNode);
 	}
-	
 });
 
 iconDelete.addEventListener('click', function() {
@@ -149,34 +161,27 @@ function clear() {
 
 document.querySelector('#plusTel')
 	.addEventListener('click', function () {
-		const newInput = document.createElement('input');
-		newInput.type = 'tel';
-		newInput.placeholder = 'Telephone №';
-		newInput.classList.add('tel');
-		newInput.classList.add('added');
-		const newDel = document.createElement('img');
-		newDel.src = 'img/basket.png';
-		newDel.classList.add('remove');
-
-		document.querySelector('.telNumbers').appendChild(newInput);
-		document.querySelector('.telNumbers').appendChild(newDel);
-		let telTempl = templateTel.content.querySelector("div");
-		
-		let cloneTel = document.importNode(telTempl, true);
-
-		templateInfo.content.querySelector(".arrayTelNumbers").append(cloneTel);
-		
+		addInput();
 	});
 
 document.querySelector('.telNumbers').addEventListener('click', ({target}) => {
 	if ((target.classList.contains('remove'))) {
-		console.log('ha')
 		target.previousElementSibling.remove();
 		target.remove();
 	}
-	
 })
+function addInput() {
+	const newInput = document.createElement('input');
+	newInput.type = 'tel';
+	newInput.placeholder = 'Telephone №';
+	newInput.classList.add('tel', 'added');
+	const newDel = document.createElement('img');
+	newDel.src = 'img/basket.png';
+	newDel.classList.add('remove');
 
+	document.querySelector('.telNumbers').appendChild(newInput);
+	document.querySelector('.telNumbers').appendChild(newDel);
+}
 
 const saved = localStorage.getItem('ContactItems');
 const savedBirthdate = localStorage.getItem('BirthItems');
@@ -187,3 +192,4 @@ if (saved) {
 if(savedBirthdate) {
 	document.querySelector('.birthPerson').innerHTML = savedBirthdate;
 }
+
