@@ -110,7 +110,8 @@ ul.addEventListener('click', ({target}) => {
 		target.nextElementSibling.classList.toggle('hidden');
 	}
 	if ((target.classList.contains('replace'))) {
-		info.classList.toggle('hidden');
+		const infoNext = target.parentNode.nextElementSibling;
+		infoNext.classList.toggle('hidden');
 	}
 	if ((target.classList.contains('icon_edit'))) {
 		toggle();
