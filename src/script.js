@@ -1,7 +1,7 @@
 document.querySelector('.fa-search')
-.addEventListener("click", function() {
-	document.querySelector('.search').classList.toggle('hidden');
-});
+	.addEventListener("click", function() {
+		document.querySelector('.search').classList.toggle('hidden');
+	});
 
 document.querySelector('.submenu').addEventListener('click', ({target}) => {
 	document.querySelectorAll('.submenu>li').forEach(function(item) {
@@ -12,23 +12,23 @@ document.querySelector('.submenu').addEventListener('click', ({target}) => {
 
 
 document.querySelector('.text')
-.addEventListener("click", function() {
-	document.querySelector('.enter_form').classList.toggle('hidden');
-});
+	.addEventListener("click", function() {
+		document.querySelector('.enter_form').classList.toggle('hidden');
+	});
 
 document.querySelector('.adress > button')
-.addEventListener("click", function() {
-	document.querySelector('.callback_form').classList.toggle('hidden');
-	document.querySelector('.content').classList.add('dark');
-	document.querySelector('footer').classList.add('dark');
-});
+	.addEventListener("click", function() {
+		document.querySelector('.callback_form').classList.toggle('hidden');
+		document.querySelector('.content').classList.add('dark');
+		document.querySelector('footer').classList.add('dark');
+	});
 
 document.querySelector('#close')
-.addEventListener("click", function() {
-	document.querySelector('.callback_form').classList.toggle('hidden');
-	document.querySelector('.content').classList.remove('dark');
-	document.querySelector('footer').classList.remove('dark');
-});	
+	.addEventListener("click", function() {
+		document.querySelector('.callback_form').classList.toggle('hidden');
+		document.querySelector('.content').classList.remove('dark');
+		document.querySelector('footer').classList.remove('dark');
+	});	
 
 const $galWrapper = document.querySelector('.bg');
 const circleFirst = document.querySelector('.circle1');
@@ -43,8 +43,10 @@ circleFirst.addEventListener('click', function() {
 	circleFirst.style.backgroundColor = 'white';
 	document.querySelector('.content').style.background = 'radial-gradient(circle, #cdf3de, #849d8f)';
 	document.querySelector('footer').style.background = '#849d8f';
-})
+});
+
 $galWrapper.style.marginLeft = '0px';
+
 circleSecond.addEventListener('click', function() {
 	clearBg(document.querySelectorAll('.circle'));
 	$galWrapper.style.transition = 'margin-left 1s';
@@ -52,7 +54,8 @@ circleSecond.addEventListener('click', function() {
 	circleSecond.style.backgroundColor = 'white';
 	document.querySelector('.content').style.background = 'radial-gradient(circle, #bfdcd8, #8996a6)';
 	document.querySelector('footer').style.background = '#8996a6';
-})
+});
+
 circleThird.addEventListener('click', function() {
 	clearBg(document.querySelectorAll('.circle'));
 	$galWrapper.style.transition = 'margin-left 1s';
@@ -66,7 +69,8 @@ function clearBg(elem) {
 	elem.forEach(function(item) {
 		item.style.backgroundColor = 'transparent';
 	}) 
-}
+};
+
 let count = 0;
 const ul = document.querySelector('.product');
 const template = document.querySelector('#tmpl');
@@ -87,7 +91,6 @@ document.querySelector('.pieces').addEventListener('click',({target}) => {
 
 		const name = target.parentNode.children[3].textContent;
 		newText.textContent = name;
-
 		priceForOne.textContent = target.parentNode.children[2].children[0].textContent;
 		
 		let countForItem1 = 0;
@@ -128,11 +131,11 @@ document.querySelector('.pieces').addEventListener('click',({target}) => {
 				countForItem = 0;
 				document.querySelectorAll('.kg').forEach (function(item) {
 					count += +item.textContent;
-				})
+				});
 				sum = 0;
 				document.querySelectorAll('.totalPrice').forEach (function(item) {
 					sum += +item.textContent;
-				})
+				});
 				document.querySelector('.basket').children[1].textContent = count + text;
 				document.querySelector('.sum').textContent = sum;
 
@@ -174,17 +177,17 @@ document.querySelector('.pieces').addEventListener('click',({target}) => {
 		sum = 0;
 		document.querySelectorAll('.totalPrice').forEach(function(item) {
 			sum += +item.textContent;
-		})
+		});
 		
 		document.querySelector('.sum').textContent = sum;
 	}
-	
 });
+
 document.querySelector('.basket').addEventListener('click', function() {
 	if(document.querySelector('.product').children.length !== 0) {
 		document.querySelector('.items').classList.toggle('hidden');
 	}
-})
+});
 
 function checkText() {
 	let text;
