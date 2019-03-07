@@ -1,0 +1,34 @@
+.mdc-button {
+	background-color: rgba(57, 72, 112, 0.66);
+	border-radius: 10px;
+}
+.mdc-button:before {
+	background-color: rgba(227, 22, 22, 0.66);
+}
+.mdc-button:after {
+	background-color: rgba(27, 22, 22, 0.66);
+}
+.mdc-list > li {
+	width: 1000px;
+	margin: 0 auto 10px;
+	border: 1px solid gray;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 10px;
+}
+.mdc-list > li:nth-child(odd) {
+	background: #c8c6c6;
+}
+.mdc-form-field {
+	width: 500px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+
+}
+.mdc-textfield__input {
+	border-radius: 7px;
+	height: 30px;
+	padding-left: 10px;
+	border: 1px solid #c8c6c6;
+}
