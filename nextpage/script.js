@@ -34,9 +34,11 @@ setTimeout(function() {
 	firstPage.style.marginTop = "-100vh";
 	block.classList.toggle('hidden');
 },7000);
+
 setTimeout(function() {
 	firstPage.classList.toggle('hidden');
 },8000);
+
 setTimeout(function() {
 	block.style.transition = "margin-top 1s ease-in-out";
 	block.style.marginTop = "-100vh";
