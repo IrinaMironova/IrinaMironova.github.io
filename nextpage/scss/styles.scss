@@ -12,7 +12,7 @@
 		margin: 0 auto;
 		line-height: 100vh;
 		svg {
-			overflow: visible;
+  			overflow: visible;
 		}
 	}
 }
@@ -146,41 +146,41 @@
 		font-weight: 600;
 		letter-spacing: -2px;
 		text-transform: uppercase;
-		transform: translate3d(0, 0, 0);
-		-webkit-font-smoothing: antialiased;
-		-webkit-font-kerning: normal;
-		-webkit-text-size-adjust: 100%;
-	}
-	.Words-line {
-		width: 800px;
-		height: 150px;
-		overflow: hidden;
-		position: relative;
-		&:nth-child(odd) {
-			transform: skew(60deg, -30deg) scaleY(.66667);
+			transform: translate3d(0, 0, 0);
+			-webkit-font-smoothing: antialiased;
+			-webkit-font-kerning: normal;
+			-webkit-text-size-adjust: 100%;
 		}
-		&:nth-child(even) {
-			transform: skew(0deg, -30deg) scaleY(1.33333);
-		}
-		@for $i from 1 through $total-lines+1 {
-			&:nth-child(#{$i}) {
-				left: $left-offset * $i;
+		.Words-line {
+			width: 800px;
+			height: 150px;
+			overflow: hidden;
+			position: relative;
+			&:nth-child(odd) {
+				transform: skew(60deg, -30deg) scaleY(.66667);
+			}
+			&:nth-child(even) {
+				transform: skew(0deg, -30deg) scaleY(1.33333);
+			}
+			@for $i from 1 through $total-lines+1 {
+				&:nth-child(#{$i}) {
+					left: $left-offset * $i;
+				}
 			}
 		}
-	}
 
-	p {
-		margin-top: 0;
-		height: $clip-height;
-		line-height: $line-height;
-		padding: 0 10px;
-		transition: all .4s ease-in-out;
-		transform: translate3d(0, 0, 0);
-		vertical-align: top;
-		white-space: nowrap;
-		text-shadow: 5px 1px 1px white; 
-		opacity: 0.8;
-	}
+		p {
+			margin-top: 0;
+			height: $clip-height;
+			line-height: $line-height;
+			padding: 0 10px;
+			transition: all .4s ease-in-out;
+			transform: translate3d(0, 0, 0);
+			vertical-align: top;
+			white-space: nowrap;
+			text-shadow: 5px 1px 1px white; 
+			opacity: 0.8;
+		}
 
 	.Words:hover {
 		p {
@@ -361,7 +361,7 @@
 @media (max-width: 1300px) {
 	.content {
 		align-items: center;
-		flex-flow: column wrap;
+   		flex-flow: column wrap;
 		h3 {
 			display: block;
 			font-size: 58px;
@@ -376,9 +376,9 @@
 @media (max-width: 750px) {
 	.content {
 		margin: 0 auto;
-		width: 370px;
-		height: 400px;
-		padding: 0;
+   		 width: 370px;
+   		 height: 400px;
+   		 padding: 0;
 		h3 {
 			font-size: 38px;
 			transform: none;
@@ -393,7 +393,7 @@
 	.finish {
 		flex-flow: row nowrap;
 		width: 300px;
-		margin: 0 auto;
+    	margin: 0 auto;
 	}
 	.letter {
 		padding: 0;
@@ -428,7 +428,7 @@
 	.finish {
 		flex-flow: row nowrap;
 		width: 300px;
-		margin: 0 auto;
+    	margin: 0 auto;
 	}
 }
 
@@ -441,8 +441,8 @@
 		height: 350px;
 	}
 	.footer {
-		padding: 0 20px 58px;
-		flex-flow: row nowrap;
+	 	padding: 0 20px 58px;
+    	flex-flow: row nowrap;
 	}
 	.letter {
 		padding-top: 0;
