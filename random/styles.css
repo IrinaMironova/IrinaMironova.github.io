@@ -1,0 +1,21 @@
+.main {
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+.numbers {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+.order {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}

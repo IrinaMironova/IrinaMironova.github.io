@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link href="preloader.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<div id="overlay"></div>
+	<div id="spinner"></div>
+	<div class="main">
+		<h1 class="numbers">Из миллиона случайных чисел в диапазоне 0 - 1:</h1>
+		<div class="order">
+			<p class="unit">
+				<span>Количество единиц:</span>
+				<span id="one"></span>
+				<span>Что составляет:</span>
+				<span id="one_percent"></span>
+				<span>%</span> <br>
+				<span>Количество нулей:</span>
+				<span id="null"></span>
+				<span>Что составляет:</span>
+				<span id="null_percent"></span>
+				<span>%</span>
+			</p>
+			<canvas id="oilChart1" width="150" height="50"></canvas>
+		</div>
+		<div class="order">
+			<p class="double">
+				<span>Количество последовательностей 11:</span>
+				<span id="one_one"></span>
+				<span>Что составляет:</span>
+				<span id="one_one_percent"></span>
+				<span>%</span><br>
+				<span>Количество последовательностей 00:</span>
+				<span id="null_null"></span>
+				<span>Что составляет:</span>
+				<span id="null_null_percent"></span>
+				<span>%</span><br>
+				<span>Количество последовательностей 01:</span>
+				<span id="null_one"></span>
+				<span>Что составляет:</span>
+				<span id="null_one_percent"></span>
+				<span>%</span><br>
+				<span>Количество последовательностей 10:</span>
+				<span id="one_null"></span>
+				<span>Что составляет:</span>
+				<span id="one_null_percent"></span>
+				<span>%</span>
+			</p>
+			<canvas id="oilChart2" width="150" height="50"></canvas>
+		</div>
+		<div class="order">
+			<p class="triple">
+				<span>Количество последовательностей 111:</span>
+				<span id="one_one_one"></span>
+				<span>Что составляет:</span>
+				<span id="one_one_one_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 000:</span>
+				<span id="null_null_null"></span>
+				<span>Что составляет:</span>
+				<span id="null_null_null_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 001:</span>
+				<span id="null_null_one"></span>
+				<span>Что составляет:</span>
+				<span id="null_null_one_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 010:</span>
+				<span id="null_one_null"></span>
+				<span>Что составляет:</span>
+				<span id="null_one_null_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 100:</span>
+				<span id="one_null_null"></span>
+				<span>Что составляет:</span>
+				<span id="one_null_null_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 110:</span>
+				<span id="one_one_null"></span>
+				<span>Что составляет:</span>
+				<span id="one_one_null_percent"></span>
+				<span>%</span><br>
+
+				<span>Количество последовательностей 011:</span>
+				<span id="null_one_one"></span>
+				<span>Что составляет:</span>
+				<span id="null_one_one_percent"></span>
+				<span>%</span>
+			</p>
+			<canvas id="oilChart3" width="150" height="50"></canvas>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script src='script.js'></script>
+</body>
+</html>
