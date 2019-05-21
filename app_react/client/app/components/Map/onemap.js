@@ -5,7 +5,6 @@
 import React from 'react';
 import DG from '2gis-maps';
 import { getFromStorage } from '../../utils/storage';
-import List from '../List/list';
 
 class Onemap extends React.Component {
     constructor() {
@@ -147,7 +146,6 @@ class Onemap extends React.Component {
                     <button type="button" onClick={this.saveMarkers}> Save </button>
                     <button type="button" onClick={this.ShowHideMarkers}> Hide/Show </button>
                 </div>
-                <List />
             </React.Fragment>
         );
     }

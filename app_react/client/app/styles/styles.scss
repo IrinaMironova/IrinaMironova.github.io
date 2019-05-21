@@ -112,21 +112,6 @@ button {
   width: 400px;
   margin: 10px auto;
 }
-#main ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-  li {
-    width: 150px;
-    margin-bottom: 10px;
-    padding: 10px;
-    list-style: none;
-    text-transform: uppercase;
-    background: linear-gradient(to top, #cddc39, #4caf50);
-    border-radius: 5px;
-    text-align: center;
-  }
-}
 .logout {
   width: 200px;
   margin: 0 auto;
