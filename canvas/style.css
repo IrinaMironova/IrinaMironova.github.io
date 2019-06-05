@@ -1,0 +1,34 @@
+body {
+	background-image: url('https://cs1.livemaster.ru/storage/3a/e7/a7e493c7bee73f08aa9aefb44azh--suveniry-i-podarki-vinilovyj-fon-dlya-predmetnoj-semki-50h50-.jpg');
+}
+.canvas {
+	border-radius: 5px;
+	width: 1100px;
+	margin: 20px auto;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.form {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+button{
+	background: linear-gradient(to top, #fefcea, #36f1a5);
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    width: 220px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(to top, #fefcea, #36f1a5);
+    cursor: pointer;
+    text-align: center;
+}

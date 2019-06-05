@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image concatenation app</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form class="form">
+		<div>
+			<label for="firstInput" class="custom-file-upload">Choose image from first input</label>
+			<input type="file" id="firstInput" name="imageFirst" accept="image/x-png,image/gif,image/jpeg"/>
+			<label for="secondInput" class="custom-file-upload">Choose image from second input</label>
+			<input type="file" id="secondInput" name="imageSecond" accept="image/x-png,image/gif,image/jpeg"/>
+		</div>
+		<button type="button" class="btn">turn over</button>
+	</form>
+	<div class="canvas">
+		<canvas id="canvas" width="1100" height="1100"></canvas>
+	</div>
+	
+	<script src="main.js"></script>
+</body>
+</html>
