@@ -1,0 +1,30 @@
+.app {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Georgia;
+}
+.nav {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	color: #b500ff;
+	li {
+		width: 120px;
+		height: 30px;
+		line-height: 30px;
+		background-color: #c8d2cc;
+		border: 5px solid #f1da36;
+		border-radius: 20px;
+		text-align: center;
+		& > a {
+			text-decoration: none;
+		}
+		&:hover {
+			background-color: #000;
+			& > a {
+				color: #fff;
+			}
+		}
+	}
+}
